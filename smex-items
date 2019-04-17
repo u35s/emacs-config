@@ -1,19 +1,23 @@
 
 ;; ----- smex-history -----
 (
- shell
- load-file
- cd
  package-install
+ shell
+ kill-some-buffers
+ cd
+ goto-address-at-mouse
+ load-file
  5x5
- arp
- dbx
 )
 
 ;; ----- smex-data -----
 (
- (load-file . 2)
- (package-install . 2)
- (shell . 2)
- (cd . 1)
+ (load-file . 3)
+ (package-install . 4)
+ (shell . 4)
+ (cd . 6)
+ (kill-some-buffers . 2)
+ (gofmt . 1)
+ (org-cdlatex-environment-indent . 1)
+ (goto-address-at-mouse . 1)
 )
