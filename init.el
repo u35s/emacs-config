@@ -13,7 +13,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (git-gutter smex window-number switch-window auto-complete))))
+    (evil git-gutter smex window-number switch-window auto-complete))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -22,9 +22,11 @@
  )
 
 ;; 默认设置修改 
+(global-linum-mode 1)
 (setq make-backup-files nil) ; stop creating backup~ files
 (setq auto-save-default nil) ; stop creating #autosave# files
 ;; m-space键复制
+(setq create-lockfiles nil)
 (global-unset-key (kbd "C-SPC"))
 (global-set-key (kbd "M-SPC") 'set-mark-command)
 ;; golang
@@ -61,3 +63,6 @@
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command) ;; This is your old M-x.
 ;; git gutter
 (global-git-gutter-mode +1)
+;; evil
+(require 'evil)
+(evil-mode 1)
