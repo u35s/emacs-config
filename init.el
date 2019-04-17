@@ -22,7 +22,7 @@
  )
 
 ;; 默认设置修改 
-(global-linum-mode 1)
+;; (global-linum-mode 1)
 (setq make-backup-files nil) ; stop creating backup~ files
 (setq auto-save-default nil) ; stop creating #autosave# files
 ;; m-space键复制
@@ -35,6 +35,9 @@
 (require 'go-autocomplete)
 (require 'auto-complete-config)
 (ac-config-default)
+;; Call Gofmt before saving
+(setq gofmt-command "goimports")
+(add-hook 'before-save-hook 'gofmt-before-save)
 ;; 窗口切换
 (require 'switch-window)
 (global-set-key (kbd "C-x o") 'switch-window)
@@ -65,3 +68,6 @@
 ;; evil
 (require 'evil)
 (evil-mode 1)
+;; LoadingLispFiles
+(load "~/.emacs.d/conf-evil-clipboard")
+(require 'conf-evil-clipboard)

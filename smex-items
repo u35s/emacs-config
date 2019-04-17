@@ -1,19 +1,19 @@
 
 ;; ----- smex-history -----
 (
+ load-file
  package-install
  shell
  kill-some-buffers
  cd
  goto-address-at-mouse
- load-file
  5x5
 )
 
 ;; ----- smex-data -----
 (
- (load-file . 3)
- (package-install . 4)
+ (load-file . 8)
+ (package-install . 6)
  (shell . 4)
  (cd . 6)
  (kill-some-buffers . 2)
