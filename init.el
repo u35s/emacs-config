@@ -6,7 +6,7 @@
 (package-initialize)
 (add-to-list 'load-path "~/.emacs.d/plugins/")
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(package-refresh-contents)
+;; (package-refresh-contents)
 
 
 (custom-set-variables
@@ -16,7 +16,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (molokai-theme find-file-in-project go-autocomplete go-mode evil git-gutter smex window-number switch-window auto-complete))))
+    (magit molokai-theme find-file-in-project go-autocomplete go-mode evil git-gutter smex window-number switch-window auto-complete))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -61,6 +61,13 @@
 (global-set-key (kbd "C-x 4 0") 'switch-window-then-kill-buffer)
 (require 'window-number)
 (window-number-mode 1)
+
+(define-prefix-command 'ctl-w-map)
+(global-set-key (kbd "C-w") 'ctl-w-map)
+(global-set-key (kbd "C-w h") 'windmove-left)
+(global-set-key (kbd "C-w j") 'windmove-down)
+(global-set-key (kbd "C-w k") 'windmove-up)
+(global-set-key (kbd "C-w l") 'windmove-right)
 ;; smex
 (require 'smex) ; Not needed if you use package.el
 (smex-initialize)
@@ -72,7 +79,17 @@
 ;; evil
 (require 'evil)
 (evil-mode 1)
+;(setq default-tab-width 4)
+;(setq evil-shift-width 4)
+(setq-default tab-width 4)
 ;; LoadingLispFiles
 (load "conf-evil-clipboard")
 (require 'conf-evil-clipboard)
+;;iterm
 (load "iterm")
+;; awesome-tab
+(require 'awesome-tab)
+(awesome-tab-mode t)
+(global-set-key (kbd "C-x p") 'awesome-tab-forward-tab)
+;; magit-status 
+(global-set-key (kbd "C-x g") 'magit-status)
