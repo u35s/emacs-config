@@ -93,3 +93,5 @@
 (global-set-key (kbd "C-x p") 'awesome-tab-forward-tab)
 ;; magit-status 
 (global-set-key (kbd "C-x g") 'magit-status)
+;; file-find
+(global-set-key (kbd "C-x p") 'find-file-in-project)

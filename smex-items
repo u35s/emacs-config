@@ -2,20 +2,20 @@
 ;; ----- smex-history -----
 (
  magit-status
+ eval-buffer
+ cd
+ shell
+ load-file
  magit-commit
  magit-commit-amend
- magit-add-change-log-entry
- magit-diff
- load-file
- package-install
 )
 
 ;; ----- smex-data -----
 (
- (load-file . 10)
+ (load-file . 11)
  (package-install . 10)
- (shell . 9)
- (cd . 8)
+ (shell . 10)
+ (cd . 9)
  (kill-some-buffers . 2)
  (gofmt . 1)
  (org-cdlatex-environment-indent . 1)
@@ -24,13 +24,13 @@
  (imenu . 2)
  (imenus . 1)
  (which-key-mode . 1)
- (eval-buffer . 1)
+ (eval-buffer . 2)
  (vc-annotate . 5)
  (magit . 1)
  (magit-diff . 3)
  (git-commit-mode . 1)
  (git-commit-review . 1)
- (magit-status . 4)
+ (magit-status . 5)
  (magit-add-change-log-entry . 1)
  (magit-commit-amend . 1)
  (magit-commit-add-log . 1)
