@@ -1,8 +1,8 @@
 
 ;; ----- smex-history -----
 (
- magit-status
  eval-buffer
+ magit-status
  cd
  shell
  load-file
@@ -24,7 +24,7 @@
  (imenu . 2)
  (imenus . 1)
  (which-key-mode . 1)
- (eval-buffer . 2)
+ (eval-buffer . 3)
  (vc-annotate . 5)
  (magit . 1)
  (magit-diff . 3)

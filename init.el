@@ -90,7 +90,7 @@
 ;; awesome-tab
 (require 'awesome-tab)
 (awesome-tab-mode t)
-(global-set-key (kbd "C-x p") 'awesome-tab-forward-tab)
+(global-set-key (kbd "C-x t") 'awesome-tab-forward-tab)
 ;; magit-status 
 (global-set-key (kbd "C-x g") 'magit-status)
 ;; file-find

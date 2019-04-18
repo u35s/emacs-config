@@ -7,7 +7,8 @@
  (magit-diff:--diff-algorithm)
  (magit-file-dispatch nil)
  (magit-log
+  (("--" "main.go"))
   (("--" "init.el"))
-  ("-n256" "--graph" "--decorate")
-  (("--" "main.go")))
+  ("-n256" "--graph" "--decorate"))
+ (magit-pull nil)
  (magit-push nil))
