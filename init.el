@@ -4,7 +4,10 @@
 ;; You may delete these explanatory comments.
 (require 'package)
 (package-initialize)
-(add-to-list'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'load-path "~/.emacs.d/plugins/")
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-refresh-contents)
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -13,14 +16,15 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (find-file-in-project go-autocomplete go-mode evil git-gutter smex window-number switch-window auto-complete))))
+    (molokai-theme find-file-in-project go-autocomplete go-mode evil git-gutter smex window-number switch-window auto-complete))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
+;; 使用molokai
+(load-theme 'molokai 1)
 ;; 默认设置修改 
 ;; (global-linum-mode 1)
 (setq make-backup-files nil) ; stop creating backup~ files
@@ -69,5 +73,6 @@
 (require 'evil)
 (evil-mode 1)
 ;; LoadingLispFiles
-(load "~/.emacs.d/conf-evil-clipboard")
+(load "conf-evil-clipboard")
 (require 'conf-evil-clipboard)
+(load "iterm")

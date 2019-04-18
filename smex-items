@@ -1,23 +1,27 @@
 
 ;; ----- smex-history -----
 (
- load-file
- package-install
  shell
- kill-some-buffers
+ load-file
  cd
- goto-address-at-mouse
- 5x5
+ package-install
+ imenu
+ find-file-in-project
+ kill-some-buffers
 )
 
 ;; ----- smex-data -----
 (
- (load-file . 8)
- (package-install . 6)
- (shell . 4)
- (cd . 6)
+ (load-file . 10)
+ (package-install . 10)
+ (shell . 8)
+ (cd . 7)
  (kill-some-buffers . 2)
  (gofmt . 1)
  (org-cdlatex-environment-indent . 1)
  (goto-address-at-mouse . 1)
+ (find-file-in-project . 2)
+ (imenu . 2)
+ (imenus . 1)
+ (which-key-mode . 1)
 )
