@@ -17,7 +17,7 @@
  '(global-evil-visualstar-mode t)
  '(package-selected-packages
    (quote
-	(evil-numbers evil-magit evil-visualstar magit molokai-theme find-file-in-project go-autocomplete go-mode evil git-gutter smex window-number switch-window auto-complete))))
+	(go-rename evil-anzu evil-numbers evil-magit evil-visualstar magit molokai-theme find-file-in-project go-autocomplete go-mode evil git-gutter smex window-number switch-window auto-complete))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -106,3 +106,6 @@
 (global-set-key (kbd "C-x t") 'awesome-tab-forward-tab)
 ;; file-find
 (global-set-key (kbd "C-x p") 'find-file-in-project)
+
+;; anzu
+(global-anzu-mode +1)
