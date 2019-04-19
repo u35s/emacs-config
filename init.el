@@ -77,6 +77,7 @@
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command) ;; This is your old M-x.
 ;; git gutter
 (global-git-gutter-mode +1)
+
 ;; evil
 (require 'evil)
 (evil-mode 1)
@@ -85,21 +86,23 @@
 (setq-default tab-width 4)
 ;; evil magit
 (require 'evil-magit)
-;; LoadingLispFiles
-(load "conf-evil-clipboard")
-(require 'conf-evil-clipboard)
-;; evil visualstar 
+;; magit-status 
+(global-set-key (kbd "C-x g") 'magit-status)
+;; evil visualstar  like gd but now is */#
 (global-evil-visualstar-mode 1)
 ;; like vim ctrl-a ctrl-d
 (define-key evil-normal-state-map (kbd "C-c a") 'evil-numbers/inc-at-pt)
 (define-key evil-normal-state-map (kbd "C-c d") 'evil-numbers/dec-at-pt)
+
+;; system clipboard
+(load "conf-evil-clipboard")
+(require 'conf-evil-clipboard)
+
 ;;iterm
 (load "iterm")
 ;; awesome-tab
 (require 'awesome-tab)
 (awesome-tab-mode t)
 (global-set-key (kbd "C-x t") 'awesome-tab-forward-tab)
-;; magit-status 
-(global-set-key (kbd "C-x g") 'magit-status)
 ;; file-find
 (global-set-key (kbd "C-x p") 'find-file-in-project)
