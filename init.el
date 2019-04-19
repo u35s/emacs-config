@@ -14,9 +14,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(global-evil-visualstar-mode t)
  '(package-selected-packages
    (quote
-	(evil-visualstar magit molokai-theme find-file-in-project go-autocomplete go-mode evil git-gutter smex window-number switch-window auto-complete))))
+	(evil-magit evil-visualstar magit molokai-theme find-file-in-project go-autocomplete go-mode evil git-gutter smex window-number switch-window auto-complete))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -82,6 +83,8 @@
 ;(setq default-tab-width 4)
 ;(setq evil-shift-width 4)
 (setq-default tab-width 4)
+;; evil magit
+(require 'evil-magit)
 ;; LoadingLispFiles
 (load "conf-evil-clipboard")
 (require 'conf-evil-clipboard)
